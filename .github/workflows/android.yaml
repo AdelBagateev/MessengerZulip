@@ -52,8 +52,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: set up keys.properties
-        run: echo "${{ secrets.KEYS_PROPERTIES }}" > keys.properties
       - name: set up JDK 17
         uses: actions/setup-java@v3
         with:
