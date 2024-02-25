@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_new_stream">Create new stream</string>
+    <string name="hint_stream_name">Name</string>
+    <string name="hint_stream_description">Description</string>
+    <string name="configure_new_stream">Configure new stream</string>
+    <string name="error_no_connection_failed_update_streams">No internet connection\nStreams data may be outdated</string>
+    <string name="fields_can_not_be_empty">Fields cannot be empty</string>
+    <string name="error_creating_new_stream">Something went wrong\nYour stream has not been created</string>
+</resources>

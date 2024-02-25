@@ -1,0 +1,10 @@
+package com.example.profile.data.datasource.remote.response
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+class Presence(
+    @SerialName("status")
+    val status: String,
+)

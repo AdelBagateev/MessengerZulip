@@ -1,4 +1,94 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        targetAndroidSdk = 33
+        minAndroidSdk = 28
+
+        retrofitVersion = '2.9.0'
+        serializationJsonVersion ='1.4.1'
+        serializationConverterVersion = '0.8.0'
+        okhttpVersion = '4.10.0'
+        ciceroneVersion = '7.1'
+        shimmerVersion = '0.5.0'
+        roomVersion = "2.5.1"
+        coroutineVersion = '1.6.4'
+        lifecycleVersion = '2.6.1'
+        elmslieVersion = "2.1.1"
+        daggerVersion = '2.45'
+        timberVersion = '5.0.1'
+        coilVersion = '2.2.2'
+        coreKtxVersion = '1.9.0'
+        appcompatVersion = '1.6.1'
+        materialVersion = '1.8.0'
+        constraintlayoutVersion = '2.1.4'
+        junitTestingVersion = '4.13.2'
+        coreTestingVersion =  '2.2.0'
+        mockitoVersion = '2.25.0'
+        junitAndroidTestingVersion = '1.1.5'
+        kaspressoVersion = '1.5.1'
+        testRunnerVersion = '1.5.2'
+        testOrchestratorVersion = '1.4.2'
+        testMonitorVersion = '1.6.1'
+        Libs = [
+                Android: [
+                        Lifecycle: "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
+                        Room: [
+                                Runtime: "androidx.room:room-runtime:$roomVersion",
+                                Compiler: "androidx.room:room-compiler:$roomVersion",
+                                Ktx: "androidx.room:room-ktx:$roomVersion"
+                        ],
+                        Material: "com.google.android.material:material:$materialVersion",
+                        ConstraintLayout: "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion",
+                        CoreKtx: "androidx.core:core-ktx:$coreKtxVersion",
+                        AppCompat: "androidx.appcompat:appcompat:$appcompatVersion",
+                ],
+                Elmslie: [
+                        Core: "com.github.vivid-money.elmslie:elmslie-core:$elmslieVersion",
+                        Android:  "com.github.vivid-money.elmslie:elmslie-android:$elmslieVersion",
+                        Coroutines: "com.github.vivid-money.elmslie:elmslie-coroutines:$elmslieVersion"
+                ],
+                Network: [
+                        Retrofit: [
+                                Retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
+                                SerialiazationConverter: "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$serializationConverterVersion"
+                    ],
+                        OkHttp : [
+                                OkHttp:  "com.squareup.okhttp3:okhttp:$okhttpVersion",
+                                LoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+                        ],
+                        SerialiazationJson: "org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationJsonVersion",
+                ],
+                Coroutine: [
+                        Core: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion",
+                        Android:  "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+                ],
+                Cicerone: "com.github.terrakok:cicerone:$ciceroneVersion",
+                Dagger: [
+                        Dagger:  "com.google.dagger:dagger:$daggerVersion",
+                        Compiler: "com.google.dagger:dagger-compiler:$daggerVersion"
+                ],
+                Utils: [
+                        Shimmer:  "com.facebook.shimmer:shimmer:$shimmerVersion",
+                        Timber: "com.jakewharton.timber:timber:$timberVersion",
+                        Coil: "io.coil-kt:coil:$coilVersion"
+                ],
+                Testing: [
+                        JUnit: "junit:junit:$junitTestingVersion",
+                        Core: "androidx.arch.core:core-testing:$coreTestingVersion",
+                        Coroutine: "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineVersion",
+                        Mockito: "org.mockito:mockito-core:$mockitoVersion"
+                ],
+                AndroidTesting: [
+                        JUnit: "androidx.test.ext:junit:$junitAndroidTestingVersion",
+                        Kaspresso: "com.kaspersky.android-components:kaspresso:$kaspressoVersion",
+                        MockWebServer: "com.squareup.okhttp3:mockwebserver:$okhttpVersion",
+                        Runner: "androidx.test:runner:$testRunnerVersion",
+                        Orchestrator: "androidx.test:orchestrator:$testOrchestratorVersion",
+                        Monitor: "androidx.test:monitor:$testMonitorVersion"
+                ]
+        ]
+    }
+}
 plugins {
     id 'com.android.application' version '7.4.1' apply false
     id 'com.android.library' version '7.4.1' apply false

@@ -1,0 +1,10 @@
+{
+  "result":"success",
+  "msg":"",
+  "topics": [
+    {
+      "name":"stream events",
+      "max_id":353954744
+    }
+  ]
+}

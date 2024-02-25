@@ -8,18 +8,19 @@ plugins {
 
 android {
     namespace 'com.example.homework2'
-    compileSdk 33
-
+    compileSdk targetAndroidSdk
     defaultConfig {
         applicationId "com.example.homework2"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+
+        minSdk minAndroidSdk
+        targetSdk targetAndroidSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
     }
-
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -35,9 +36,11 @@ android {
         it.buildConfigField 'int', 'ID', keystoreProperties['myId']
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    plugins.withType(com.android.build.gradle.BasePlugin).configureEach { plugin ->
+        plugin.extension.compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_1_8
+            targetCompatibility = JavaVersion.VERSION_1_8
+        }
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -49,65 +52,58 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.compose.ui:ui-unit:1.4.0'
-
-
     // region Network
-    def retrofit = '2.9.0'
-    implementation "com.squareup.retrofit2:retrofit:$retrofit"
-    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1'
-    implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
-
-    def okhttp = '4.10.0'
-    implementation "com.squareup.okhttp3:okhttp:$okhttp"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
-    //endregion
-
-    //region cicerone
-    def ciceroneVersion = '7.1'
-    implementation "com.github.terrakok:cicerone:$ciceroneVersion"
-    //endregion
-
-    //region shimmer
-    def shimmerVersion = '0.5.0'
-    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
-    //endregion
-
-    //region Room
-    def room_version = "2.5.1"
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
-    //endregion
-
-    //region coroutine
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation Libs.Network.Retrofit.Retrofit
+    implementation Libs.Network.Retrofit.SerialiazationConverter
+    implementation Libs.Network.SerialiazationJson
+    implementation Libs.Network.OkHttp.LoggingInterceptor
     //endregion
 
     //region Elm
-    def elmslie = "2.1.1"
-    implementation "com.github.vivid-money.elmslie:elmslie-core:$elmslie"
-    implementation "com.github.vivid-money.elmslie:elmslie-android:$elmslie"
-    implementation "com.github.vivid-money.elmslie:elmslie-coroutines:$elmslie"
+    implementation Libs.Elmslie.Android
+    //endregion
+
+    //region cicerone
+    implementation Libs.Cicerone
+    //endregion
+
+    //region Room
+    implementation Libs.Android.Room.Runtime
+    annotationProcessor Libs.Android.Room.Compiler
+    kapt Libs.Android.Room.Compiler
+    implementation Libs.Android.Room.Ktx
+    //endregion
+
+    //region coroutine
+    implementation Libs.Coroutine.Core
+    implementation Libs.Coroutine.Android
+    implementation Libs.Android.Lifecycle
     //endregion
 
     //region dagger
-    def dagger = '2.45'
-    implementation "com.google.dagger:dagger:$dagger"
-    kapt "com.google.dagger:dagger-compiler:$dagger"
+    implementation Libs.Dagger.Dagger
+    kapt Libs.Dagger.Compiler
+    //end region
 
     //region utils
-    implementation 'com.jakewharton.timber:timber:5.0.1'
-    implementation 'io.coil-kt:coil:2.2.2'
-    //endregion
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation Libs.Utils.Timber
+    //end region
+
+    implementation Libs.Android.ConstraintLayout
+    implementation Libs.Android.CoreKtx
+    implementation Libs.Android.AppCompat
+    implementation Libs.Android.Material
+
+    implementation project(":common")
+    implementation project(":profile")
+    implementation project(":messenger")
+    implementation project(":channels")
+    implementation project(":people")
+
+    androidTestImplementation Libs.AndroidTesting.JUnit
+    androidTestImplementation Libs.AndroidTesting.Kaspresso
+    androidTestImplementation Libs.AndroidTesting.MockWebServer
+    androidTestImplementation Libs.AndroidTesting.Runner
+    androidTestUtil Libs.AndroidTesting.Orchestrator
+    debugImplementation Libs.AndroidTesting.Monitor
 }

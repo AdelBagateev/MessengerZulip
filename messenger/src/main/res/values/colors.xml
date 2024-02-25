@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="count_unselected">#CCCCCC</color>
+    <color name="grey">#8A8787</color>
+    <color name="text_message">#FAFAFA</color>
+    <color name="message_sender_bg">#1e1e1e</color>
+    <color name="message_sender_et">#282828</color>
+    <color name="bg_toolbar">#2A9D8F</color>
+    <color name="message">#1C1C1C</color>
+    <color name="media_sender">#464646</color>
+    <color name="bg_topic_narrowing">#2E3C8C</color>
+    <color name="topic_text">#53281B</color>
+    <color name="count_selected">#EAEAEA</color>
+    <color name="name">#2A9D8F</color>
+    <color name="date_text">#999999</color>
+    <color name="date_bg">#070707</color>
+    <color name="message_sender_plain">#1e1e1e</color>
+    <color name="start_gradient_my_msg">#2A9D8F</color>
+    <color name="end_gradient_my_msg">#006153</color>
+    <color name="message_sender_btn">#2A9D8F</color>
+</resources>

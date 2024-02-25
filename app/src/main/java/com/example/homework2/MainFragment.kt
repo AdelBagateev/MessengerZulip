@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.homework2.common.lazyUnsafe
+import com.example.common.lazyUnsafe
 import com.example.homework2.databinding.FragmentMainBinding
-import com.example.homework2.global_di.qualifiers.MainFragmentNavigatorHolder
-import com.example.homework2.global_di.qualifiers.MainFragmentRouter
+import com.example.homework2.di.AppComponentHolder
+import com.example.homework2.di.qualifiers.MainFragmentNavigatorHolder
+import com.example.homework2.di.qualifiers.MainFragmentRouter
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
@@ -39,8 +40,9 @@ class MainFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        requireContext().getAppComponent().inject(this)
+        AppComponentHolder.get().inject(this)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

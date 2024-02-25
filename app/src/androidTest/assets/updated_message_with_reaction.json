@@ -1,0 +1,57 @@
+{
+  "result": "success",
+  "msg": "",
+  "messages": [
+    {
+      "id": 353140530,
+      "sender_id": 604629,
+      "content": "(deleted)",
+      "recipient_id": 1057178,
+      "timestamp": 1682581323,
+      "client": "okhttp",
+      "subject": "stream events",
+      "topic_links": [],
+      "last_edit_timestamp": 1682581537,
+      "edit_history": [
+        {
+          "user_id": 604629,
+          "timestamp": 1682581537,
+          "prev_content": "[image.jpg](/user_uploads/54137/QmiMen92OVcD_FpSku4AOM-v/image.jpg)",
+          "prev_rendered_content": "<p><a href=\"/user_uploads/54137/QmiMen92OVcD_FpSku4AOM-v/image.jpg\">image.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/54137/QmiMen92OVcD_FpSku4AOM-v/image.jpg\" title=\"image.jpg\"><img src=\"/user_uploads/54137/QmiMen92OVcD_FpSku4AOM-v/image.jpg\"></a></div>",
+          "prev_rendered_content_version": 1
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "grinning",
+          "emoji_code": "1f600",
+          "reaction_type": "unicode_emoji",
+          "user": {
+            "email": "user604629@tinkoff-android-spring-2023.zulipchat.com",
+            "id": 604629,
+            "full_name": "Адель"
+          },
+          "user_id": 604629
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read"
+      ],
+      "sender_full_name": "Адель",
+      "sender_email": "user604629@tinkoff-android-spring-2023.zulipchat.com",
+      "sender_realm_str": "tinkoff-android-spring-2023",
+      "display_recipient": "PhotoTest",
+      "type": "stream",
+      "stream_id": 383515,
+      "avatar_url": "https://secure.gravatar.com/avatar/b5c40080f884a5eba54c83d63b0ec1c1?d=identicon&version=1",
+      "content_type": "text/x-markdown"
+    }
+  ],
+  "found_anchor": true,
+  "found_oldest": false,
+  "found_newest": false,
+  "history_limited": false,
+  "anchor": 353140530
+}

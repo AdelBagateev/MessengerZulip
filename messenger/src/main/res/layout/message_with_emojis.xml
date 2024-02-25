@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="com.example.messenger.presentation.ui.views.MessageWithEmojisLayout">
+
+    <com.example.common.view.RoundedAvatarView
+        android:id="@+id/iv_avatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp" />
+
+    <com.example.messenger.presentation.ui.views.MessageLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:paddingStart="12dp"
+        tools:ignore="RtlSymmetry" />
+
+    <com.example.messenger.presentation.ui.views.FlexBoxLayout
+        android:id="@+id/reactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp" />
+</merge>

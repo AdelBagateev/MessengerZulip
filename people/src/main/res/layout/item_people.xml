@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.example.common.view.RoundedAvatarView
+        android:id="@+id/rav_avatar"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:src="@drawable/ic_profile" />
+
+    <View
+        android:id="@+id/status"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="-20dp"
+        android:background="@drawable/bg_offline_status_iv" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/people_item_name"
+            android:textSize="22sp"
+            tools:text="Ivan Fedotof" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/people_item_mail"
+            android:textSize="16sp"
+            tools:text="chepugash@mail.ru" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

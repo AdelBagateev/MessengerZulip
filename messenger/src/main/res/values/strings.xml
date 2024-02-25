@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_example">какой-то длинный текст какой длинный текст !!</string>
+    <string name="name_example">Ivan Fedotof</string>
+    <string name="topic_of_sending_message">Enter topic here</string>
+    <string name="description_media">media</string>
+    <string name="error_timeout_updating_message">The time limit for editing this message has passed</string>
+    <string name="error_no_connection_message">No internet connection\nYour message has not been sent</string>
+    <string name="error_no_connection_update_message">No internet connection\nYour message has not been updated</string>
+    <string name="error_no_connection_delete_message">No internet connection\nYour message has not been deleted</string>
+    <string name="error_no_connection_reaction">No internet connection\nYour reaction has not been sent</string>
+    <string name="hint_message_sender">Enter your message…</string>
+    <string name="fields_can_not_be_empty">Fields cannot be empty</string>
+    <string name="field_topic_can_not_be_empty">Field topic cannot be empty</string>
+    <string name="topic">Topic: #%s</string>
+    <string name="change_message_topic">Enter new topic of message</string>
+    <string name="change">Change</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_message_content">Edit message</string>
+    <string name="save">Save</string>
+    <string name="add_reaction">add reaction</string>
+    <string name="delete_message">delete</string>
+    <string name="edit_message">edit</string>
+    <string name="copy">Copy</string>
+    <string name="change_topic_of_message">change topic</string>
+    <string name="topic_hint">Topic</string>
+</resources>

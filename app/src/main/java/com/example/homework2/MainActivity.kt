@@ -2,9 +2,10 @@ package com.example.homework2
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.common.lazyUnsafe
 import com.example.homework2.Screens.Main
-import com.example.homework2.common.lazyUnsafe
 import com.example.homework2.databinding.ActivityMainBinding
+import com.example.homework2.di.AppComponentHolder
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        this.getAppComponent().inject(this)
+        AppComponentHolder.get().inject(this)
         if (savedInstanceState == null) {
             router.get().replaceScreen(Main())
         }

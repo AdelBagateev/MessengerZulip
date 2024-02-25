@@ -1,0 +1,12 @@
+package com.example.people.data.datasource.remote.response
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+class Presence(
+    @SerialName("status")
+    val status: String,
+    @SerialName("timestamp")
+    val timestamp: Double,
+)

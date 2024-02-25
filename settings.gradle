@@ -1,4 +1,4 @@
-pluginManagement {
+  pluginManagement {
     repositories {
         google()
         mavenCentral()
@@ -10,7 +10,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
-rootProject.name = "Messenger"
+rootProject.name = "Homework2"
 include ':app'
+include ':profile'
+include ':common'
+include ':messenger'
+include ':channels'
+include ':people'

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_bots_have_not_profile">Bots haven\'t profile!</string>
+    <string name="error_no_connection_failed_update_people">No internet connection\nPeople data may be outdated</string>
+</resources>

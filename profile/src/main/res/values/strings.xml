@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_no_connection_failed_update_user">No internet connection\nUser data may be outdated</string>
+</resources>

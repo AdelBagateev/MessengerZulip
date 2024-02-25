@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="people_item_name">#FAFAFA</color>
+    <color name="people_item_mail">#A1A1A1</color>
+</resources>

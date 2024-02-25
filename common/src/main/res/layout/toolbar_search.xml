@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/et_searcher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_bottom_menu"
+    android:drawableEnd="@drawable/ic_search"
+    android:hint="@string/search"
+    android:imeOptions="actionSend"
+    android:inputType="text"
+    android:paddingStart="24dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="12dp"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:textSize="24sp" />

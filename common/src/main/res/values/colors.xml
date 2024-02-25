@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shimmer">#8A8787</color>
+    <color name="online_profile">#4AB54D</color>
+    <color name="idle_profile">#FF5722</color>
+    <color name="offline_profile">#700800</color>
+    <color name="bg_bottom_menu">#1E1E1E</color>
+    <color name="selected">#5C5B5B</color>
+    <color name="black">#FF000000</color>
+    <color name="grey">#8A8787</color>
+</resources>

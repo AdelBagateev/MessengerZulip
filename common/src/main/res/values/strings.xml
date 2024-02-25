@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="try_again">Try again</string>
+    <string name="error_msg">Oops, something went wrong. Try Again</string>
+    <string name="error_no_connection">No internet connection</string>
+    <string name="search">Search…</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+</resources>

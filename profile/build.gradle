@@ -1,0 +1,81 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.10'
+}
+
+android {
+    namespace 'com.example.profile'
+    compileSdk targetAndroidSdk
+
+    defaultConfig {
+        minSdk minAndroidSdk
+        targetSdk targetAndroidSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    //region network
+    implementation Libs.Network.Retrofit.Retrofit
+    implementation Libs.Network.SerialiazationJson
+    //end region
+
+    //region room
+    implementation Libs.Android.Room.Runtime
+    //end region
+
+    //region Elm
+    implementation Libs.Elmslie.Core
+    implementation Libs.Elmslie.Android
+    implementation Libs.Elmslie.Coroutines
+    //endregion
+
+    //region cicerone
+    implementation Libs.Cicerone
+    //endregion
+
+    //region coroutine
+    implementation Libs.Coroutine.Core
+    implementation Libs.Coroutine.Android
+    implementation Libs.Android.Lifecycle
+    //endregion
+
+    //region dagger
+    implementation Libs.Dagger.Dagger
+    kapt Libs.Dagger.Compiler
+    //end region
+    //region utils
+    implementation Libs.Utils.Timber
+    implementation Libs.Utils.Coil
+    implementation Libs.Utils.Shimmer
+    //end utils
+
+    implementation Libs.Android.ConstraintLayout
+    implementation Libs.Android.CoreKtx
+    implementation Libs.Android.AppCompat
+    implementation Libs.Android.Material
+
+    implementation project(":common")
+}
